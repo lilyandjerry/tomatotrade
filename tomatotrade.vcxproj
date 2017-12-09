@@ -11,13 +11,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="CThostFtdcMdImp.h" />
     <ClInclude Include="ctpinterface\ThostFtdcMdApi.h" />
     <ClInclude Include="ctpinterface\ThostFtdcTraderApi.h" />
     <ClInclude Include="ctpinterface\ThostFtdcUserApiDataType.h" />
     <ClInclude Include="ctpinterface\ThostFtdcUserApiStruct.h" />
+    <ClInclude Include="ctpwrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CThostFtdcMdImp.cpp" />
+    <ClCompile Include="ctpwrapper.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectName>tomatotrade</ProjectName>
@@ -33,7 +36,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v141</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
@@ -91,7 +94,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>thosttraderapi.lib;thostmduserapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>.\ctpinterface\window86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
