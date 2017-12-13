@@ -28,6 +28,7 @@ bool CTHostFtdcMdImp::InitMDImp(char* frantip,char* datapath)
 	m_api->RegisterFront(frantip);
 	m_api->Init();
 	m_api->Join();
+	return true;
 }
 
 bool CTHostFtdcMdImp::DestoryMDImp()
