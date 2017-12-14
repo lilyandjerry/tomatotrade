@@ -1,9 +1,8 @@
 
+#!/usr/bin/python
 
-class FuturesContract:
-    historyurl = None
-    def __init__(self):
-        historyurl = "http://stock2.finance.sina.com.cn/futures/api/json.php/IndexService.getInnerFuturesMiniKLine5m?symbol="
-    def get_hist_data():
-        pass
-    def get_rt_tick():
+list1 = ['physics', 'chemistry', 1997, 2000];
+list2 = [1, 2, 3, 4, 5, 6, 7 ];
+
+print "list1[0]: ", list1[0]
+print "list2[1:5]: ", list2[0:5]

@@ -16,6 +16,7 @@ class ctpdatawrapper:
             dllpath += "/ctpwrapper.dll"
         else:
             dllpath += "/libtomatotrade.so"
+        print 'Try to load library'+dllpath
         self.ctplib = cdll.LoadLibrary(dllpath)
 
     def init_ctp_api(self, frantip, datapath):
@@ -40,6 +41,8 @@ class ctpdatawrapper:
         self.ctplib.unsub_for_quote_rsp(ppInstrumentID,nCount)
 
 # for ctp wrapper test 
+print 'CTP V1.0 START'
 ctpw = ctpdatawrapper()
 ctpw.loadctpdll()
-ctpw.init_ctp_api('tcp://180.168.146.187:10000',os.getcwd()+'/data')
+print 'init ctp api address tcp://180.168.146.187:10000'
+ctpw.init_ctp_api('tcp://180.168.146.187:10000','data')

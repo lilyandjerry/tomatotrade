@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jxc/mycode/github/tomatotrade/ctest/main.cpp
+../ctpwrapper.h
+/home/jxc/mycode/github/tomatotrade/ctpwrapper.h
+
+/home/jxc/mycode/github/tomatotrade/ctpwrapper.h
+

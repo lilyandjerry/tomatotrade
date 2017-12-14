@@ -1,0 +1,3 @@
+/home/jxc/mycode/github/tomatotrade/ctest/CMakeFiles/rebuild_cache.dir
+/home/jxc/mycode/github/tomatotrade/ctest/CMakeFiles/apitest.dir
+/home/jxc/mycode/github/tomatotrade/ctest/CMakeFiles/edit_cache.dir

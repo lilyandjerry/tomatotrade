@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "python2.7/Python.h"
 
 #include "ctpinterface/ThostFtdcMdApi.h"
 #include "ctpinterface/ThostFtdcTraderApi.h"
@@ -37,9 +38,15 @@ public:
 	virtual void OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarketData);
 	virtual void OnRtnForQuoteRsp(CThostFtdcForQuoteRspField *pForQuoteRsp);
 public:
+	bool InitLocalPython();
+	
 	static CTHostFtdcMdImp* g_mdimp;
 private:
 	CThostFtdcMdApi* m_api;
+
+	PyObject* m_pName;
+	PyObject* m_pModule;
+	PyObject* m_pDict;
 };
 
 #endif
